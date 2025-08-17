@@ -1,0 +1,4 @@
+medical-chatbot/
+logs/
+medical_chatbot_assistant.egg-info/
+.env

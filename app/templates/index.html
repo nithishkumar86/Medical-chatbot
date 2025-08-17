@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
+        form {
+            margin: 20px auto;
+            width: 60%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: none;
+            outline: none;
+        }
+        button {
+            margin-top: 15px;
+            background-color: #0d6efd;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0b5ed7;
+        }
+        .response h2 {
+            color: #198754;
+        }
+        .response p {
+            background-color: #e9f7ef;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #198754;
+            display: inline-block;
+            max-width: 70%;
+        }
+        .error h2 {
+            color: #dc3545;
+        }
+        .error p {
+            background-color: #f8d7da;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #dc3545;
+            display: inline-block;
+            max-width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Medical Question Answering System</h1>
+    <form method="post" action="/predict">
+        <div>
+            <textarea name="prompt" placeholder="ask a medical related question..." required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="response">
+        {% if response %}
+            <h2>Response:</h2>
+            <p>{{ response }}</p>
+        {% endif %}
+    </div>
+    <div class="error">
+        {% if error %}
+            <h2>Error :</h2>
+            <p>{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

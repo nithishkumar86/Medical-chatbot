@@ -1,0 +1,17 @@
+model:
+  provider: "groq"
+  model_name: "llama-3.3-70b-versatile"
+
+embedding:
+  provider: "huggingface"
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+
+collection:
+  collection_name: "medical-bot"
+
+retriever:
+  k: 3
+
+chunking:
+  chunks: 5000
+  overlap: 100
