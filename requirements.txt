@@ -3,8 +3,6 @@ langchain_pinecone
 langchain_groq
 langchain-community
 langchain-core
-fastapi[standard]
 flask
-uvicorn
 sentence-transformers
 -e .
