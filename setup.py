@@ -4,4 +4,4 @@ setup(name="medical-chatbot-assistant",
       author="nithishkumar",
       author_email="mnithish1231234@gmail.com",
       packages=find_packages(),
-      install_requires=["langchain_huggingface","langchain_groq","langchain-community","langchain-core","fastapi[standard]","flask","uvicorn","sentence-transformers==4.1.0"])
+      install_requires=["langchain_huggingface","langchain_groq","langchain-community","langchain-core","fastapi[standard]","flask","uvicorn","sentence-transformers"])
