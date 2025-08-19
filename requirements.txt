@@ -6,5 +6,5 @@ langchain-core
 fastapi[standard]
 flask
 uvicorn
-sentence-transformers==4.1.0
+sentence-transformers
 -e .
