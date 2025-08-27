@@ -48,25 +48,10 @@ pip install -r requirements.txt
 
 **Run Flask frontend**  
 ```bash
-python app/frontend.py
+cd app
+python application.py
 ```
 UI available at → `http://localhost:5000`  
-
----
-
-### 2️⃣ Docker  
-
-**Build Image**  
-```bash
-docker build -t medical-chatbot .
-```
-
-**Run Container**  
-```bash
-docker run -d -p 8000:8000 -p 5000:5000 medical-chatbot
-```  
-
----
 
 ### 3️⃣ Deployment (CI/CD)  
 
