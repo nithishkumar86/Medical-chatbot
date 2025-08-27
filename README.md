@@ -76,15 +76,6 @@ docker run -d -p 8000:8000 -p 5000:5000 medical-chatbot
 - Pushes to AWS ECR.  
 - Deploys on AWS Runner.  
 
-#### AWS ECR Push Example  
-```bash
-aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com
-docker build -t medical-chatbot .
-docker tag medical-chatbot:latest <account_id>.dkr.ecr.<region>.amazonaws.com/medical-chatbot:latest
-docker push <account_id>.dkr.ecr.<region>.amazonaws.com/medical-chatbot:latest
-```
-
----
 
 ## 📊 Logging & Error Handling  
 
