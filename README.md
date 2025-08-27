@@ -91,7 +91,6 @@ UI available at → `http://localhost:5000`
 ## 📖 Example Query  
 
 ```json
-POST http://localhost:8000/predict
 {
   "question": "What are the symptoms of diabetes?"
 }
